@@ -1,0 +1,29 @@
+/*
+|--------------------------------------------------------------------------
+| IRANYekan - Regular (Font Weight 400)
+|--------------------------------------------------------------------------
+| Used for general body text and default elements in Farsi.
+*/
+@font-face {
+  font-family: "IRANYekan";
+  src: url("/src/assets/fonts/IRANSansX-Regular.woff2") format("woff2"),
+    url("/src/assets/fonts/IRANSansX-Regular.woff") format("woff");
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+  font-display: swap; /* Best practice for performance */
+}
+
+/*
+|--------------------------------------------------------------------------
+| IRANYekan - Bold (Font Weight 700)
+|--------------------------------------------------------------------------
+| Used for titles, headings, and emphasised text.
+*/
+@font-face {
+  font-family: "IRANYekan";
+  src: url("/src/assets/fonts/IRANSansX-Bold.woff2") format("woff2"),
+    url("/src/assets/fonts/IRANSansX-Bold.woff") format("woff");
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+  font-display: swap;
+}

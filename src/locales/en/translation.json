@@ -1,0 +1,17 @@
+{
+  "app": {
+    "title": "Weather Dashboard",
+    "login_button": "Login",
+    "logout_button": "Logout",
+    "language_switcher": "فارسی"
+  },
+  "login": {
+    "welcome": "Welcome",
+    "prompt": "Enter your name to continue:",
+    "submit": "Continue"
+  },
+  "dashboard": {
+    "greeting": "Hello, {{name}}",
+    "search_placeholder": "Search city..."
+  }
+}
