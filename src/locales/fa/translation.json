@@ -1,0 +1,17 @@
+{
+  "app": {
+    "title": "داشبورد آب و هوا",
+    "login_button": "ورود",
+    "logout_button": "خروج",
+    "language_switcher": "English"
+  },
+  "login": {
+    "welcome": "خوش آمدید",
+    "prompt": "نام خود را برای ادامه وارد کنید:",
+    "submit": "ادامه"
+  },
+  "dashboard": {
+    "greeting": "سلام، {{name}}",
+    "search_placeholder": "جستجوی شهر..."
+  }
+}
