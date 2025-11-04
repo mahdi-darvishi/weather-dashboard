@@ -3,26 +3,130 @@
 import { createTheme } from "@mui/material/styles";
 import type { ThemeOptions } from "@mui/material/styles";
 
+const primary = {
+  50: "#EEFAFF",
+  100: "#CFEDFA",
+  200: "#98D8F1",
+  300: "#57C0E9",
+  400: "#19ABE4",
+  500: "#009CD8",
+  600: "#0F6FA6",
+  700: "#10598E",
+  800: "#074979",
+  900: "#003464",
+  A100: "#82F8FF",
+  A200: "#44DDFF",
+  A400: "#29B2FF",
+  A700: "#298BFF",
+};
+const error = {
+  50: "#FFEBEE",
+  100: "#FFCDD2",
+  200: "#EF9A9A",
+  300: "#E57373",
+  400: "#EF5350",
+  500: "#F44336",
+  600: "#E53935",
+  700: "#D32F2F",
+  800: "#C62828",
+  900: "#B71C1C",
+  A100: "#FF8A80",
+  A200: "#FF5252",
+  A400: "#FF1744",
+  A700: "#D50000",
+};
+
+const warning = {
+  50: "#FFF3E0",
+  100: "#FFE0B2",
+  200: "#FFCC80",
+  300: "#FFB74D",
+  400: "#FFA726",
+  500: "#FF9800",
+  600: "#FB8C00",
+  700: "#F57C00",
+  800: "#EF6C00",
+  900: "#E65100",
+  A100: "#FFD180",
+  A200: "#FFAB40",
+  A400: "#FF9100",
+  A700: "#FF6D00",
+};
+
+const success = {
+  50: "#E8F5E9",
+  100: "#C8E6C9",
+  200: "#A5D6A7",
+  300: "#81C784",
+  400: "#66BB6A",
+  500: "#4CAF50",
+  600: "#43A047",
+  700: "#388E3C",
+  800: "#2E7D32",
+  900: "#1B5E20",
+  A100: "#B9F6CA",
+  A200: "#69F0AE",
+  A400: "#00E676",
+  A700: "#00C853",
+};
+
+const info = {
+  50: "#E3F2FD",
+  100: "#BBDEFB",
+  200: "#90CAF9",
+  300: "#64B5F6",
+  400: "#42A5F5",
+  500: "#2196F3",
+  600: "#1E88E5",
+  700: "#1976D2",
+  800: "#1565C0",
+  900: "#0D47A1",
+  A100: "#82B1FF",
+  A200: "#448AFF",
+  A400: "#2979FF",
+  A700: "#2962FF",
+};
+
+// Grey or Surface
+const surface = {
+  50: "#FFFFFF",
+  100: "#F5F9FC",
+  200: "#E1E9EE",
+  300: "#CDD9E0",
+  400: "#AFBCC4",
+  500: "#8895A0",
+  600: "#62707C",
+  700: "#3D4852",
+  800: "#25262E",
+  900: "#1C1B22",
+  A100: "#96AAB5",
+  A200: "#3F6A81",
+  A400: "#373E46",
+  A700: "#0C0C0C",
+};
+
+const grey = {
+  50: "#F3FAFE",
+  100: "#F3F3F3",
+  200: "#F3F4F7",
+  300: "#BBC1C4",
+  500: "#8895A0",
+  700: "#151D32",
+};
 // ----------------------------------------------------
-// 1. Base Theme Configuration
+// 2. Base Theme Configuration
 // ----------------------------------------------------
-// Define base options shared between Light and Dark themes
 const baseThemeOptions: ThemeOptions = {
-  // Define the complex font stack based on project requirements.
-  // IRANYekan is primary for Farsi/RTL, followed by Latin fonts.
   typography: {
     fontFamily: [
-      "IRANYekan", // 1. Primary Persian Font
-      "Google Sans", // 2. Specific font for bold/headlines (if globally available)
-      "Inter", // 3. Primary Latin font
-      "Roboto", // 4. Secondary Latin font / MUI default
-      "Arial", // 5. Fallback
+      "IRANYekan",
+      "Google Sans",
+      "Inter",
+      "Roboto",
+      "Arial",
       "sans-serif",
     ].join(","),
-
-    // We can override specific elements for better visual hierarchy:
     h1: {
-      // Use Google Sans/Inter for a distinct headline look
       fontFamily: ["Google Sans", "Inter", "IRANYekan", "sans-serif"].join(","),
       fontWeight: 700,
     },
@@ -30,110 +134,61 @@ const baseThemeOptions: ThemeOptions = {
       fontFamily: ["Inter", "IRANYekan", "sans-serif"].join(","),
       fontWeight: 600,
     },
-    // Body text uses the default stack, ensuring IRANYekan for Persian content.
   },
-
-  // ... (rest of baseThemeOptions, lightTheme, and darkTheme remain the same)
 };
 
-// ... (lightTheme and darkTheme definitions remain unchanged)
-
 // ----------------------------------------------------
-// 2. Light Theme Definition (Applying Light Palette)
+// 3. Light Theme Definition
 // ----------------------------------------------------
 
 export const lightTheme = createTheme({
   ...baseThemeOptions,
   palette: {
     mode: "light",
-
-    // Primary Color: TSL Blue 500 (#009CD8) from the palette
-    primary: {
-      main: "#009CD8",
-    },
-    // Secondary Color: Using TSL Blue 400 (#1059AE) as a related highlight color
-    secondary: {
-      main: "#1059AE",
-    },
-
-    // Status Colors from the palette
-    error: {
-      main: "#F44336", // Error Red 500
-    },
-    warning: {
-      main: "#FF9800", // Warning Orange 500
-    },
-    success: {
-      main: "#4CAF50", // Success Green 500
-    },
-    info: {
-      main: "#2196F3", // Info Blue 500
-    },
-
-    // Background Colors from the Surface palette (Light Mode)
+    primary: primary,
+    secondary: surface,
+    error: error,
+    warning: warning,
+    success: success,
+    info: info,
+    grey: grey,
     background: {
-      // Absolute white for the main page background
-      default: "#FFFFFF",
-      // Absolute white for cards and paper elements
-      paper: "#FFFFFF",
+      default: grey[50],
+      paper: grey[50],
     },
-
-    // Text Colors from the Surface palette (Darker text for light background)
     text: {
-      // Dark text for primary content (Surface 800)
-      primary: "#25252E",
-      // Lighter dark text for secondary content (Surface 600)
-      secondary: "#62707C",
+      primary: primary[900],
+      secondary: surface[100],
+      disabled: surface[400],
     },
   },
 });
 
 // ----------------------------------------------------
-// 3. Dark Theme Definition (Applying Dark Palette)
+// 4. Dark Theme Definition
 // ----------------------------------------------------
 
 export const darkTheme = createTheme({
   ...baseThemeOptions,
   palette: {
     mode: "dark",
+    primary: primary,
+    secondary: grey,
+    error: error,
+    warning: warning,
+    success: success,
+    info: info,
+    grey: grey,
 
-    // Primary Color: TSL Blue 500 (#009CD8) - kept consistent for branding
-    primary: {
-      main: "#009CD8",
-    },
-    // Secondary Color: TSL Blue 400
-    secondary: {
-      main: "#1059AE",
-    },
-
-    // Status Colors from the palette (consistent with light theme)
-    error: {
-      main: "#F44336",
-    },
-    warning: {
-      main: "#FF9800",
-    },
-    success: {
-      main: "#4CAF50",
-    },
-    info: {
-      main: "#2196F3",
-    },
-
-    // Background Colors from the Surface palette (Dark Mode)
     background: {
-      // Dark background (Surface Dark 800)
-      default: "#25252E",
-      // Slightly lighter dark for cards (Surface Dark 700)
-      paper: "#304B52",
+      default: grey[700],
+      paper: grey[700],
     },
 
-    // Text Colors for Dark background (Lighter text)
     text: {
-      // White text for primary content
-      primary: "#FFFFFF",
-      // Light gray text for secondary content (Surface Light 200)
-      secondary: "#CDD9E0",
+      primary: grey[200],
+      secondary: grey[300],
+      disabled: grey[500],
     },
   },
 });
