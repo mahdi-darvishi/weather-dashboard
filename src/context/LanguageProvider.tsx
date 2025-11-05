@@ -1,5 +1,3 @@
-// src/context/LanguageProvider.tsx
-
 import React, { useState, useMemo, useCallback } from "react";
 import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
@@ -10,10 +8,6 @@ import { CacheProvider } from "@emotion/react";
 import { prefixer } from "stylis";
 import rtlPlugin from "stylis-plugin-rtl";
 import { LanguageContext } from "./LanguageContext";
-
-// ----------------------------------------------------
-// Language and RTL Provider Component
-// ----------------------------------------------------
 
 interface LanguageProviderProps {
   children: ReactNode;
@@ -59,7 +53,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     [currentLanguage, isRTL, changeLanguage]
   );
 
-  // If RTL is active, we wrap the application in CacheProvider
   if (isRTL && cacheRtl) {
     return (
       <LanguageContext.Provider value={contextValue}>
@@ -68,7 +61,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     );
   }
 
-  // LTR rendering
   return (
     <LanguageContext.Provider value={contextValue}>
       {children}
