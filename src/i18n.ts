@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-// Import translation files
+
 import en from "./locales/en/translation.json";
 import fa from "./locales/fa/translation.json";
 
@@ -13,13 +13,17 @@ const resources = {
   },
 };
 
+const USER_LANGUAGE_KEY = "language";
+
 i18n.use(initReactI18next).init({
   resources,
-  lng: "en",
+
+  lng: localStorage.getItem(USER_LANGUAGE_KEY) || "en",
+
   fallbackLng: "en",
 
   interpolation: {
-    escapeValue: false,
+    escapeValue: false, // React
   },
 
   supportedLngs: ["en", "fa"],

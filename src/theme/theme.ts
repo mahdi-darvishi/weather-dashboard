@@ -1,7 +1,22 @@
-// src/theme/theme.ts
-
 import { createTheme } from "@mui/material/styles";
 import type { ThemeOptions } from "@mui/material/styles";
+
+import "@mui/material/styles";
+
+declare module "@mui/material/styles" {
+  // شکل آبجکت گرادینت
+  interface GradientOptions {
+    main?: string;
+  }
+
+  interface ThemeOptions {
+    gradients?: GradientOptions;
+  }
+
+  interface Theme {
+    gradients: GradientOptions;
+  }
+}
 
 const primary = {
   50: "#EEFAFF",
@@ -109,11 +124,14 @@ const grey = {
   50: "#F3FAFE",
   100: "#F3F3F3",
   200: "#F3F4F7",
+  250: "#757575",
   300: "#BBC1C4",
   500: "#8895A0",
   700: "#151D32",
   A400: "#373E46",
 };
+
+const black = "#000000";
 // ----------------------------------------------------
 // 2. Base Theme Configuration
 // ----------------------------------------------------
@@ -159,9 +177,13 @@ export const lightTheme = createTheme({
     },
     text: {
       primary: primary[900],
-      secondary: surface[100],
+      secondary: black,
       disabled: surface[400],
     },
+  },
+
+  gradients: {
+    main: "linear-gradient(90deg, #F3FAFE 0%, rgba(204, 221, 221, 0.619608) 51%, #F3FAFE 100%)",
   },
 });
 
@@ -188,8 +210,12 @@ export const darkTheme = createTheme({
 
     text: {
       primary: grey[200],
-      secondary: grey[300],
+      secondary: grey[200],
       disabled: grey[500],
     },
+  },
+
+  gradients: {
+    main: "linear-gradient(90deg, #292F45 0%, #3F4861 50.5%, #151D32 98%)",
   },
 });

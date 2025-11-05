@@ -1,17 +1,18 @@
 {
-  "app": {
-    "title": "Weather Dashboard",
-    "login_button": "Login",
-    "logout_button": "Logout",
-    "language_switcher": "فارسی"
+  "common": {
+    "weatherDashboard": "Weather Dashboard",
+    "searchYourLocation": "Search Your Location",
+    "exit": "Exit",
+    "light": "Light",
+    "dark": "Dark",
+    "fa": "Fa",
+    "en": "En",
+    "language": "Language",
+    "mode": "Mode",
+    "copyright": "All rights of this site are reserved for Nadin Sadr Aria Engineering Company.",
+    "contactUs": "contact us",
+    "date": "12:25 . Monday 23 December 2023"
   },
-  "login": {
-    "welcome": "Welcome",
-    "prompt": "Enter your name to continue:",
-    "submit": "Continue"
-  },
-  "dashboard": {
-    "greeting": "Hello, {{name}}",
-    "search_placeholder": "Search city..."
-  }
+  "login": {},
+  "dashboard": {}
 }

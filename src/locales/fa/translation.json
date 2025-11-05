@@ -1,17 +1,18 @@
 {
-  "app": {
-    "title": "داشبورد آب و هوا",
-    "login_button": "ورود",
-    "logout_button": "خروج",
-    "language_switcher": "English"
+  "common": {
+    "weatherDashboard": "داشبورد آب و هوا",
+    "searchYourLocation": "جستجو مکان شما",
+    "exit": "خروج",
+    "light": "روشن",
+    "dark": "تیره",
+    "fa": "فارسی",
+    "en": "انگلیسی",
+    "language": "زبان",
+    "mode": "حالت",
+    "copyright": "همه حقوق این سایت برای شرکت مهندسی نادین صدر آریا محفوظ است.",
+    "contactUs": "تماس با ما",
+    "date": "12.25 شنبه 2 دی 1402"
   },
-  "login": {
-    "welcome": "خوش آمدید",
-    "prompt": "نام خود را برای ادامه وارد کنید:",
-    "submit": "ادامه"
-  },
-  "dashboard": {
-    "greeting": "سلام، {{name}}",
-    "search_placeholder": "جستجوی شهر..."
-  }
+  "login": {},
+  "dashboard": {}
 }
