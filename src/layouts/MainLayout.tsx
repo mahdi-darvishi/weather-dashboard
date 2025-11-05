@@ -1,19 +1,24 @@
+import { Box } from "@mui/material";
 import { Outlet } from "react-router-dom";
-import { Box, AppBar, Toolbar, Typography } from "@mui/material";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export const MainLayout = () => {
   return (
-    <Box>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6">My Dashboard</Typography>
-        </Toolbar>
-      </AppBar>
-      <Box component="main" sx={{ p: 3 }}>
+    <Box display="flex" flexDirection="column" height="100vh">
+      <Navbar />
+
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          p: 3,
+        }}
+      >
         <Outlet />
       </Box>
+
+      <Footer />
     </Box>
   );
 };
-
-export default MainLayout;
