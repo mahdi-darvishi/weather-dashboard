@@ -62,7 +62,7 @@ export const SettingsMenu: React.FC = () => {
         bgcolor={open && mode === "light" ? "primary.100" : ""}
         borderColor={open ? "primary.500" : "grey.250"}
       >
-        <IconButton onClick={handleClick}>
+        <IconButton onClick={handleClick} aria-label={t("common.settings")}>
           <SettingsOutlinedIcon
             color={open && mode === "light" ? "primary" : "action"}
           />
@@ -86,7 +86,7 @@ export const SettingsMenu: React.FC = () => {
         <Box
           px={2}
           py={1.5}
-          sx={{ display: "flex", flexDirection: "column", gap: "10" }}
+          sx={{ display: "flex", flexDirection: "column", gap: 1 }}
         >
           <Box>
             <Typography component="p" color="text.secondary" mb={0.5}>
@@ -170,7 +170,6 @@ export const SettingsMenu: React.FC = () => {
               alignItems: "center",
               justifyContent: "start",
               gap: 0.5,
-              color: "#000",
               mt: 2,
               px: 0.1,
             }}

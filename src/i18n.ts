@@ -18,7 +18,13 @@ const USER_LANGUAGE_KEY = "language";
 i18n.use(initReactI18next).init({
   resources,
 
-  lng: localStorage.getItem(USER_LANGUAGE_KEY) || "en",
+  lng: (() => {
+    try {
+      return localStorage.getItem(USER_LANGUAGE_KEY) || "en";
+    } catch {
+      return "en";
+    }
+  })(),
 
   fallbackLng: "en",
 

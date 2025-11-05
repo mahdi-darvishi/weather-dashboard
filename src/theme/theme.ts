@@ -4,7 +4,7 @@ import type { ThemeOptions } from "@mui/material/styles";
 import "@mui/material/styles";
 
 declare module "@mui/material/styles" {
-  // شکل آبجکت گرادینت
+  // Gradient object shape
   interface GradientOptions {
     main?: string;
   }

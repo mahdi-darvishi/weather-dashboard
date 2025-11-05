@@ -45,7 +45,7 @@ export const LocationSelector: React.FC = () => {
       onChange={(event, newValue: LocationOption | null) => {
         setSelectedLocation(newValue);
       }}
-      isOptionEqualToValue={(option, value) => option.id === value.id}
+      isOptionEqualToValue={(option, value) => option.id === value?.id}
       fullWidth
       disablePortal={true}
       renderInput={(params) => (
