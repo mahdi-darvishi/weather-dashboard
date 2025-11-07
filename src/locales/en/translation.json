@@ -13,6 +13,10 @@
     "contactUs": "contact us",
     "date": "12:25 . Monday 23 December 2023"
   },
-  "login": {},
+  "login": {
+    "login": "Login",
+    "enterYourName": "Enter Your Name",
+    "errorMessage": "Name must be at least 8 characters long"
+  },
   "dashboard": {}
 }

@@ -19,6 +19,7 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../context/useLanguage";
 import { useThemeMode } from "../theme/useThemeMode";
+import { useAuth } from "../context/useAuth";
 
 export const SettingsMenu: React.FC = () => {
   const { t } = useTranslation();
@@ -28,6 +29,7 @@ export const SettingsMenu: React.FC = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
+  const { logout } = useAuth();
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -173,8 +175,7 @@ export const SettingsMenu: React.FC = () => {
               mt: 2,
               px: 0.1,
             }}
-
-            // onClick={} LOGOUT
+            onClick={logout}
           >
             <LogoutOutlinedIcon color="action" />
             <Typography

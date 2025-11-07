@@ -17,9 +17,12 @@ import { LocationSelector } from "./LocationSelector";
 import { SettingsMenu } from "./SettingsMenu";
 
 import { useLanguage } from "../context/useLanguage";
+import { useAuth } from "../context/useAuth";
 
 const Navbar = () => {
   const { t } = useTranslation();
+
+  const { user } = useAuth();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -53,16 +56,28 @@ const Navbar = () => {
               alt="Logo"
               sx={{ height: 40, mr: { xs: 1, md: 2 }, cursor: "pointer" }}
             />
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{
-                cursor: "pointer",
-                fontSize: { xs: "14px", md: "16px" },
-              }}
+            <Stack
+              display={"flex"}
+              flexDirection={"row"}
+              gap={1}
+              alignItems={"center"}
             >
-              {t("common.weatherDashboard")}
-            </Typography>
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{
+                  cursor: "pointer",
+                  fontSize: { xs: "14px", md: "16px" },
+                }}
+              >
+                {t("common.weatherDashboard")}
+              </Typography>
+              {user && (
+                <Typography variant="subtitle2" fontSize={{ xs: 12, md: 14 }}>
+                  ({user})
+                </Typography>
+              )}
+            </Stack>
           </Box>
 
           {isMobile ? (

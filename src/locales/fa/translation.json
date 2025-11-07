@@ -13,6 +13,10 @@
     "contactUs": "تماس با ما",
     "date": "12.25 شنبه 2 دی 1402"
   },
-  "login": {},
+  "login": {
+    "login": "ورود",
+    "enterYourName": "نام خود را وارد کنید",
+    "errorMessage": "نام باید حداقل 8 کاراکتر باشد"
+  },
   "dashboard": {}
 }

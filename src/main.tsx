@@ -6,8 +6,10 @@ import "./styles/fonts.css";
 import { LanguageProvider } from "./context/LanguageProvider";
 import { AppThemeProvider } from "./theme/AppThemeProvider";
 
-import "./i18n"; //
+import "./i18n";
 import { BrowserRouter } from "react-router-dom";
+
+import { AuthProvider } from "./context/AuthContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,7 +20,9 @@ root.render(
     <LanguageProvider>
       <AppThemeProvider>
         <BrowserRouter>
-          <App />
+          <AuthProvider>
+            <App />
+          </AuthProvider>
         </BrowserRouter>
       </AppThemeProvider>
     </LanguageProvider>
