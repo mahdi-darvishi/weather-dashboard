@@ -4,17 +4,21 @@ import type { ThemeOptions } from "@mui/material/styles";
 import "@mui/material/styles";
 
 declare module "@mui/material/styles" {
-  // Gradient object shape
   interface GradientOptions {
     main?: string;
   }
-
   interface ThemeOptions {
     gradients?: GradientOptions;
   }
-
   interface Theme {
     gradients: GradientOptions;
+  }
+
+  interface TypeBackground {
+    panel?: string;
+  }
+  interface TypeBackgroundOptions {
+    panel?: string;
   }
 }
 
@@ -127,6 +131,7 @@ const grey = {
   250: "#757575",
   300: "#BBC1C4",
   500: "#8895A0",
+  600: "#292F45",
   700: "#151D32",
   A400: "#373E46",
 };
@@ -174,6 +179,7 @@ export const lightTheme = createTheme({
     background: {
       default: grey[50],
       paper: grey[50],
+      panel: surface[50],
     },
     text: {
       primary: primary[900],
@@ -206,6 +212,7 @@ export const darkTheme = createTheme({
     background: {
       default: grey[700],
       paper: grey[700],
+      panel: grey[600],
     },
 
     text: {
