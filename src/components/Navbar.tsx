@@ -72,9 +72,11 @@ const Navbar = () => {
               >
                 {t("common.weatherDashboard")}
               </Typography>
-              <Typography variant="subtitle2" fontSize={{ xs: 12, md: 14 }}>
-                ({user})
-              </Typography>
+              {user && (
+                <Typography variant="subtitle2" fontSize={{ xs: 12, md: 14 }}>
+                  ({user})
+                </Typography>
+              )}
             </Stack>
           </Box>
 
