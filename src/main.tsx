@@ -10,6 +10,7 @@ import "./i18n";
 import { BrowserRouter } from "react-router-dom";
 
 import { AuthProvider } from "./context/AuthContext";
+import { LocationProvider } from "./context/LocationContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -21,7 +22,9 @@ root.render(
       <AppThemeProvider>
         <BrowserRouter>
           <AuthProvider>
-            <App />
+            <LocationProvider>
+              <App />
+            </LocationProvider>
           </AuthProvider>
         </BrowserRouter>
       </AppThemeProvider>
