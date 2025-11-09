@@ -9,3 +9,4 @@ interface ImportMeta {
 }
 
 declare module "dayjs-jalali";
+declare module "swiper/css";
