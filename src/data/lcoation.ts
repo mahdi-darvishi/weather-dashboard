@@ -80,6 +80,35 @@ export const locationsList: LocationOption[] = [
   },
 
   {
+    id: "ilm",
+    name_en: "Ilam",
+    name_fa: "ایلام",
+    lat: 33.6374,
+    lon: 46.4226,
+  },
+  {
+    id: "krh",
+    name_en: "Kermanshah",
+    name_fa: "کرمانشاه",
+    lat: 34.3142,
+    lon: 47.065,
+  },
+  {
+    id: "sri",
+    name_en: "Sari",
+    name_fa: "ساری",
+    lat: 36.5658,
+    lon: 53.0597,
+  },
+  {
+    id: "zah",
+    name_en: "Zahedan",
+    name_fa: "زاهدان",
+    lat: 29.4963,
+    lon: 60.8629,
+  },
+
+  {
     id: "ldn",
     name_en: "London",
     name_fa: "لندن",
@@ -162,5 +191,48 @@ export const locationsList: LocationOption[] = [
     name_fa: "تورنتو",
     lat: 43.6532,
     lon: -79.3832,
+  },
+
+  {
+    id: "cai",
+    name_en: "Cairo",
+    name_fa: "قاهره",
+    lat: 30.0444,
+    lon: 31.2357,
+  },
+  {
+    id: "rey",
+    name_en: "Reykjavik",
+    name_fa: "ریکیاویک",
+    lat: 64.1466,
+    lon: -21.9426,
+  },
+  {
+    id: "sgp",
+    name_en: "Singapore",
+    name_fa: "سنگاپور",
+    lat: 1.3521,
+    lon: 103.8198,
+  },
+  {
+    id: "cpt",
+    name_en: "Cape Town",
+    name_fa: "کیپ‌تاون",
+    lat: -33.9249,
+    lon: 18.4241,
+  },
+  {
+    id: "anc",
+    name_en: "Anchorage",
+    name_fa: "انکرج",
+    lat: 61.2181,
+    lon: -149.9003,
+  },
+  {
+    id: "rio",
+    name_en: "Rio de Janeiro",
+    name_fa: "ریودوژانیرو",
+    lat: -22.9068,
+    lon: -43.1729,
   },
 ];
