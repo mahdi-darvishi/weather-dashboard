@@ -1,4 +1,3 @@
-// src/context/LocationContext.tsx
 import { useState, type ReactNode } from "react";
 import { LocationContext } from "./useLocation";
 import type { LocationOption } from "../types";
