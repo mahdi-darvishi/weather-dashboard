@@ -121,10 +121,10 @@ const CurrentWeatherPanel: React.FC<CurrentWeatherPanelProps> = ({
 
         <Stack direction={"row"} gap={2}>
           <Typography variant="subtitle2">
-            {t("dashboard.high")}:{highTemp}
+            {t("dashboard.high")}: {highTemp}
           </Typography>
           <Typography variant="subtitle2">
-            {t("dashboard.low")}:{lowTemp}
+            {t("dashboard.low")}: {lowTemp}
           </Typography>
         </Stack>
       </Box>
