@@ -72,8 +72,6 @@ const MonthlyChart: React.FC<MonthlyChartProps> = ({ title, labels, data }) => {
     },
 
     yaxis: {
-      min: 10,
-      max: 40,
       tickAmount: 3,
       labels: {
         formatter: (val) => `${Math.round(val)}°C`,

@@ -19,18 +19,26 @@ const CurrentWeatherPanel: React.FC<CurrentWeatherPanelProps> = ({
   const { currentLanguage } = useLanguage();
   const { t } = useTranslation();
 
+  const dateParts = date.split(" ");
+
+  if (dateParts.length !== 4) {
+    console.warn("Unexpected date format:", date);
+  }
+
+  const [dayOfTheWeek, part1, part2, year] = dateParts;
+
   const englishDate = {
-    dayOfTheWeek: date.split(" ")[0],
-    month: date.split(" ")[1],
-    day: date.split(" ")[2],
-    year: date.split(" ")[3],
+    dayOfTheWeek,
+    month: part1,
+    day: part2,
+    year,
   };
 
-  const persinanDate = {
-    dayOfTheWeek: date.split(" ")[0],
-    day: date.split(" ")[1],
-    month: date.split(" ")[2],
-    year: date.split(" ")[3],
+  const persianDate = {
+    dayOfTheWeek,
+    day: part1,
+    month: part2,
+    year,
   };
 
   return (
@@ -92,13 +100,13 @@ const CurrentWeatherPanel: React.FC<CurrentWeatherPanelProps> = ({
                 ", " +
                 englishDate.year
               : // Show persian
-                persinanDate.dayOfTheWeek.slice(0, -1) +
+                persianDate.dayOfTheWeek.slice(0, -1) +
                 " " +
-                persinanDate.day +
+                persianDate.day +
                 " " +
-                persinanDate.month +
+                persianDate.month +
                 " " +
-                persinanDate.year}
+                persianDate.year}
           </Typography>
           <Typography>{time}</Typography>
         </Stack>
@@ -125,7 +133,7 @@ const CurrentWeatherPanel: React.FC<CurrentWeatherPanelProps> = ({
         <Box
           component={"img"}
           src={weatherIcon}
-          alt="Wether Icon"
+          alt="Weather Icon"
           width={{ xs: 90, md: 115 }}
           height={{ xs: 90, md: 115 }}
         ></Box>
