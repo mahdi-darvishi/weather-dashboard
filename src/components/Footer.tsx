@@ -1,11 +1,20 @@
+import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import { Box, Stack, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import MainlogoImage from "../assets/images/MainLogo.png";
-import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
-import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
+import { useFormattedDate } from "../hooks/useFormattedDate";
+import { useWeatherData } from "../hooks/useWeatherData";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const { data } = useWeatherData();
+
+  const baseDate = data?.forecast?.forecastday?.[0]?.date_epoch
+    ? new Date(data.forecast.forecastday[0].date_epoch * 1000)
+    : new Date();
+
+  const formattedDate = useFormattedDate(baseDate);
 
   return (
     <Box
@@ -55,7 +64,7 @@ const Footer = () => {
         <Stack display="flex" alignItems="center" flexDirection="row" gap={1}>
           <CalendarMonthOutlinedIcon fontSize="small" />
           <Typography fontSize={{ xs: 12, md: 14 }} fontWeight={400}>
-            {t("common.date")}
+            {formattedDate.split("-")[0]}
           </Typography>
         </Stack>
       </Box>
