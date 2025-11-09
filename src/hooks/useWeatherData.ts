@@ -1,31 +1,8 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import apiClient from "../api/apiClient";
-import { useLocation } from "../context/useLocation";
 import { useLanguage } from "../context/useLanguage";
-
-interface WeatherData {
-  current: {
-    temp_c: number;
-    feelslike_c: number;
-    condition: {
-      text: string;
-      code: number;
-    };
-  };
-  forecast: {
-    forecastday: {
-      date_epoch: number;
-      day: {
-        maxtemp_c: number;
-        mintemp_c: number;
-        condition: {
-          text: string;
-          code: number;
-        };
-      };
-    }[];
-  };
-}
+import { useLocation } from "../context/useLocation";
+import type { WeatherData } from "../types";
 
 export const useWeatherData = () => {
   const [data, setData] = useState<WeatherData | null>(null);

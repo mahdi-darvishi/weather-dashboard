@@ -1,5 +1,3 @@
-// src/components/LocationSelector.tsx
-
 import { Autocomplete, TextField } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -39,7 +37,6 @@ export const LocationSelector: React.FC = () => {
             minWidth: { md: 240 },
             fontSize: { xs: "0.875rem", md: "1rem" },
           }}
-          InputLabelProps={{ shrink: true }}
         />
       )}
     />

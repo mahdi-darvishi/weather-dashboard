@@ -1,16 +1,22 @@
 import { Box, Button, Grid, Stack, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import MainBackground from "../assets/images/LoginBackground.png";
+import LightLoginBackground from "../assets/images/LightLoginBackground.png";
+import DarkLoginBackground from "../assets/images/DarkLoginBackground.png";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import { useLanguage } from "../context/useLanguage";
 import { useAuth } from "../context/useAuth";
+import { useThemeMode } from "../theme/useThemeMode";
 
 const LoginPage = () => {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
   const [name, setName] = useState("");
   const { login } = useAuth();
+
+  const { mode } = useThemeMode();
+
+  const srcImage = mode === "dark" ? DarkLoginBackground : LightLoginBackground;
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -98,7 +104,7 @@ const LoginPage = () => {
         >
           <Box
             component="img"
-            src={MainBackground}
+            src={srcImage}
             alt="Background"
             width="100%"
             height="100%"

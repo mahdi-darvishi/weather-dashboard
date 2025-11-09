@@ -6,6 +6,8 @@ import "@mui/material/styles";
 declare module "@mui/material/styles" {
   interface GradientOptions {
     main?: string;
+    border?: string;
+    line?: string;
   }
   interface ThemeOptions {
     gradients?: GradientOptions;
@@ -16,9 +18,13 @@ declare module "@mui/material/styles" {
 
   interface TypeBackground {
     panel?: string;
+    secondary?: string;
+    card?: string;
   }
   interface TypeBackgroundOptions {
     panel?: string;
+    secondary?: string;
+    card?: string;
   }
 }
 
@@ -106,7 +112,6 @@ const info = {
   A700: "#2962FF",
 };
 
-// Grey or Surface
 const surface = {
   50: "#FFFFFF",
   100: "#F5F9FC",
@@ -131,6 +136,7 @@ const grey = {
   250: "#757575",
   300: "#BBC1C4",
   500: "#8895A0",
+  550: "#3F4861",
   600: "#292F45",
   700: "#151D32",
   A400: "#373E46",
@@ -180,6 +186,8 @@ export const lightTheme = createTheme({
       default: grey[50],
       paper: grey[50],
       panel: surface[50],
+      secondary: surface[200],
+      card: surface[300],
     },
     text: {
       primary: primary[900],
@@ -190,6 +198,11 @@ export const lightTheme = createTheme({
 
   gradients: {
     main: "linear-gradient(90deg, #F3FAFE 0%, rgba(204, 221, 221, 0.619608) 51%, #F3FAFE 100%)",
+
+    border:
+      "linear-gradient(90deg, rgba(54, 54, 54, 0) 0%, #7E7E7E 48.5%, rgba(54, 54, 54, 0) 100%)",
+
+    line: "linear-gradient(90deg, #4CDFE8 -0.58%, #7947F7 101.51%)",
   },
 });
 
@@ -213,6 +226,8 @@ export const darkTheme = createTheme({
       default: grey[700],
       paper: grey[700],
       panel: grey[600],
+      secondary: grey[600],
+      card: grey[550],
     },
 
     text: {
@@ -224,5 +239,9 @@ export const darkTheme = createTheme({
 
   gradients: {
     main: "linear-gradient(90deg, #292F45 0%, #3F4861 50.5%, #151D32 98%)",
+    border:
+      "linear-gradient(90deg, rgba(54, 54, 54, 0) 0%, #7E7E7E 48.5%, rgba(54, 54, 54, 0) 100%)",
+
+    line: "linear-gradient(90deg, #4CDFE8 -0.58%, #7947F7 101.51%)",
   },
 });
