@@ -12,7 +12,7 @@ A fully responsive, bilingual (Persian/English), dual-theme (Dark/Light) weather
 
 | Light Mode (English) | Dark Mode (English) | Persian Mode (RTL) |
 | :---: | :---: | :---: |
-| ![Weather Dashboard Light Mode](./.github/screenshots/1.png) | ![Weather Dashboard Dark Mode](./.github/screenshots/2.png) | ![Weather Dashboard Persian RTL Mode](./.github/screenshots/3.png) |
+| ![Weather Dashboard Light Mode](./.github/1.png) | ![Weather Dashboard Dark Mode](./.github/2.png) | ![Weather Dashboard Persian RTL Mode](./.github/3.png) |
 | *Fully responsive light mode dashboard.* | *Dynamic dark mode support.* | *Complete RTL support for Persian.* |
 
 
