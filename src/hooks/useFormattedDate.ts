@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import jalaliday from "jalaliday";
 import "dayjs/locale/fa";
 import "dayjs/locale/en";
-import { useLanguage } from "../context/useLanguage";
+import { useLanguage } from "./useLanguage";
 
 dayjs.extend(jalaliday);
 

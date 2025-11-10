@@ -2,10 +2,10 @@ import { Autocomplete, TextField } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import { useLanguage } from "../context/useLanguage";
+import { useLanguage } from "../hooks/useLanguage";
 import type { LocationOption } from "../types";
 
-import { useLocation } from "../context/useLocation";
+import { useLocation } from "../hooks/useLocation";
 import { locationsList } from "../data/lcoation";
 
 export const LocationSelector: React.FC = () => {

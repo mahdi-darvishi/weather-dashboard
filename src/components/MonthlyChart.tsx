@@ -2,12 +2,7 @@ import React from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 
 import Chart from "react-apexcharts";
-
-interface MonthlyChartProps {
-  title: string;
-  labels: string[];
-  data: number[];
-}
+import type { MonthlyChartProps } from "../types";
 
 const MonthlyChart: React.FC<MonthlyChartProps> = ({ title, labels, data }) => {
   const theme = useTheme();

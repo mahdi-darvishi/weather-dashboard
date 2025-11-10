@@ -16,8 +16,8 @@ import logoImage from "../assets/images/Logo.png";
 import { LocationSelector } from "./LocationSelector";
 import { SettingsMenu } from "./SettingsMenu";
 
-import { useLanguage } from "../context/useLanguage";
-import { useAuth } from "../context/useAuth";
+import { useLanguage } from "../hooks/useLanguage";
+import { useAuth } from "../hooks/useAuth";
 
 const Navbar = () => {
   const { t } = useTranslation();

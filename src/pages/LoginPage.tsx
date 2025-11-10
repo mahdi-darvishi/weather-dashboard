@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 import LightLoginBackground from "../assets/images/LightLoginBackground.png";
 import DarkLoginBackground from "../assets/images/DarkLoginBackground.png";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
-import { useLanguage } from "../context/useLanguage";
-import { useAuth } from "../context/useAuth";
+import { useLanguage } from "../hooks/useLanguage";
+import { useAuth } from "../hooks/useAuth";
 import { useThemeMode } from "../theme/useThemeMode";
 
 const LoginPage = () => {

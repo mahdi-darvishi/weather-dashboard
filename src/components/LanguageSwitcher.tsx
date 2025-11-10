@@ -7,7 +7,7 @@ import {
   type SelectChangeEvent,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../context/useLanguage";
+import { useLanguage } from "../hooks/useLanguage";
 
 export const LanguageSwitcher: React.FC = () => {
   const { t } = useTranslation();

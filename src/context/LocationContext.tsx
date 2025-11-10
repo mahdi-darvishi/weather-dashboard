@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { LocationContext } from "./useLocation";
+import { LocationContext } from "../hooks/useLocation";
 import type { LocationOption } from "../types";
 import { locationsList } from "../data/lcoation";
 
