@@ -54,7 +54,7 @@ The app demonstrates a clean, scalable, and modern React architecture using Cont
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/mahdi-darvishi/weather-dashboard.git](https://github.com/mahdi-darvishi/weather-dashboard.git)
+    git clone https://github.com/mahdi-darvishi/weather-dashboard.git
     cd weather-dashboard
     ```
 2.  **Install dependencies:**
