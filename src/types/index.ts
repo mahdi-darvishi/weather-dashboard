@@ -55,3 +55,16 @@ export interface ForecastDayProps {
 export interface ForecastPanelProps {
   forecasts: ForecastDayProps[];
 }
+
+export interface MonthlyChartProps {
+  title: string;
+  labels: string[];
+  data: number[];
+}
+
+export interface AuthContextType {
+  user: string | null;
+  isLoading: boolean;
+  login: (name: string) => void;
+  logout: () => void;
+}

@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import gpsIcon from "../assets/icons/gps.svg";
-import { useLanguage } from "../context/useLanguage";
+import { useLanguage } from "../hooks/useLanguage";
 import type { CurrentWeatherPanelProps } from "../types";
 import { useTranslation } from "react-i18next";
 

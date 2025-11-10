@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { AuthContext } from "./useAuth";
+import { AuthContext } from "../hooks/useAuth";
 
 const AUTH_KEY = "auth_token";
 

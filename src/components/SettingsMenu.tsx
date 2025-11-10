@@ -17,9 +17,9 @@ import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "../context/useLanguage";
+import { useLanguage } from "../hooks/useLanguage";
 import { useThemeMode } from "../theme/useThemeMode";
-import { useAuth } from "../context/useAuth";
+import { useAuth } from "../hooks/useAuth";
 
 export const SettingsMenu: React.FC = () => {
   const { t } = useTranslation();

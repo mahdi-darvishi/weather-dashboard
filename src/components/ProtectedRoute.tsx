@@ -1,5 +1,5 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { useAuth } from "../context/useAuth";
+import { useAuth } from "../hooks/useAuth";
 import { Box, CircularProgress } from "@mui/material";
 
 export const ProtectedRoute = () => {

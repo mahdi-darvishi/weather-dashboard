@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import CurrentWeatherPanel from "../components/CurrentWeatherPanel";
 import ForecastPanel from "../components/ForecastPanel";
 import MonthlyChart from "../components/MonthlyChart";
-import { useLanguage } from "../context/useLanguage";
-import { useLocation } from "../context/useLocation";
+import { useLanguage } from "../hooks/useLanguage";
+import { useLocation } from "../hooks/useLocation";
 import { useFormattedDate } from "../hooks/useFormattedDate";
 import { useWeatherData } from "../hooks/useWeatherData";
 import type {

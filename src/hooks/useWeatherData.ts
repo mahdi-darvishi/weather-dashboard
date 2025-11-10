@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import apiClient from "../api/apiClient";
-import { useLanguage } from "../context/useLanguage";
-import { useLocation } from "../context/useLocation";
+import { useLanguage } from "./useLanguage";
+import { useLocation } from "./useLocation";
 import type { WeatherData } from "../types";
 
 export const useWeatherData = () => {
