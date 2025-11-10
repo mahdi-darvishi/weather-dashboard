@@ -21,7 +21,7 @@ export const LocationSelector: React.FC = () => {
         currentLanguage === "fa" ? option.name_fa : option.name_en
       }
       value={selectedLocation}
-      onChange={(event, newValue: LocationOption | null) => {
+      onChange={(_, newValue: LocationOption | null) => {
         setLocation(newValue);
       }}
       isOptionEqualToValue={(option, value) => option.id === value.id}

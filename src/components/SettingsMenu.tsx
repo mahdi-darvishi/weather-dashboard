@@ -39,7 +39,7 @@ export const SettingsMenu: React.FC = () => {
   };
 
   const handleThemeChange = (
-    event: React.MouseEvent<HTMLElement>,
+    _: React.MouseEvent<HTMLElement>,
     newMode: string | null
   ) => {
     if (newMode && newMode !== mode) {
@@ -48,7 +48,7 @@ export const SettingsMenu: React.FC = () => {
   };
 
   const handleLangChange = (
-    event: React.MouseEvent<HTMLElement>,
+    _: React.MouseEvent<HTMLElement>,
     newLang: string | null
   ) => {
     if (newLang && (newLang === "en" || newLang === "fa")) {
