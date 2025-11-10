@@ -18,7 +18,8 @@ const ForecastDayCard = ({ day, icon, temp }: ForecastDayProps) => {
     >
       <Typography
         textAlign={"center"}
-        fontSize={{ xs: 14, lg: 16 }}
+        fontSize={{ xs: 12, lg: 16 }}
+        sx={{}}
         fontWeight={500}
       >
         {t("dashboard." + day)}
